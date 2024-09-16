@@ -14,16 +14,13 @@ class ApiClientController extends CI_Controller
         $this->load->view('api_key_form');
     }
 
-    // Method to fetch users
     public function get_users()
     {
         // API URL of the First Project (API Provider)
         $url = "http://localhost/1_api/API_Provider_p2/index.php/ApiDemo/users";
 
-        // Get API key, username, and password from the form
+        // API Key provided by the user through a form
         $api_key = $this->input->post('api_key'); // Getting API key from form input
-        $username = $this->input->post('username'); // Getting username for Basic Auth
-        $password = $this->input->post('password'); // Getting password for Basic Auth
 
         // Initialize cURL
         $ch = curl_init($url);
@@ -34,10 +31,6 @@ class ApiClientController extends CI_Controller
             'Content-Type: application/json',
             'X-API-KEY: ' . $api_key // Include API key in the header
         ));
-
-        // Set Basic Authentication credentials
-        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password); // Set username and password for Basic Auth
-        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC); // Enable Basic Auth
 
         // Execute the cURL request and get the response
         $response = curl_exec($ch);
@@ -58,11 +51,12 @@ class ApiClientController extends CI_Controller
 
             if ($api_response && isset($api_response['status']) && !$api_response['status']) {
                 // If API response indicates failure, redirect to error page
-                $this->session->set_flashdata('error', $api_response['error'] ?? "Invalid API key or credentials");
+                $this->session->set_flashdata('error', $api_response['error'] ?? "Invalid API key");
                 redirect('client/error_page');
             } elseif ($api_response) {
                 // Pass the API response to the view
                 $data['users'] = $api_response;
+                $data['error'] = null;
                 $this->load->view('users_view', $data);
             } else {
                 // If the API response is invalid, redirect to error page

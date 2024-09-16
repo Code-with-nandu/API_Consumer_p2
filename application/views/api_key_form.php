@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter API Key</title>
+    <title>API Key and Credentials</title>
 </head>
 <body>
-
-    <h1>Enter API Key to Fetch Users</h1>
-
-    <form action="<?php echo base_url('client/get_users'); ?>" method="post">
+    <h2>Enter API Key and Credentials to Fetch Users</h2>
+    <form action="<?php echo site_url('ApiClientController/get_users'); ?>" method="post">
         <label for="api_key">API Key:</label>
-        <input type="text" id="api_key" name="api_key" required>
-        <button type="submit">Submit</button>
+        <input type="text" id="api_key" name="api_key" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Fetch Users</button>
     </form>
 
-    <!-- Display any error messages -->
-    <?php if ($this->session->flashdata('error')): ?>
-        <p style="color:red;"><?php echo $this->session->flashdata('error'); ?></p>
+    <?php if($this->session->flashdata('error')): ?>
+        <p style="color: red;"><?php echo $this->session->flashdata('error'); ?></p>
     <?php endif; ?>
-
 </body>
 </html>
