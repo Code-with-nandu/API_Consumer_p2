@@ -169,6 +169,66 @@ class ApiClientController extends CI_Controller
         redirect('ApiClientController/get_users');
     }
 
+    // Method to fetch employee details by ID
+public function getEmployeeById($id)
+{
+    // Check if API credentials are stored in session
+    if (!$this->session->userdata('api_key') || !$this->session->userdata('username') || !$this->session->userdata('password')) {
+        $this->session->set_flashdata('error', 'Please authenticate first');
+        redirect('ApiClientController/api_key_form');
+    }
+
+    // API URL of the First Project (API Provider)
+    $api_url = 'http://localhost/1_api/API_Provider_p2/index.php/api/find/' . $id;
+
+    // Retrieve authentication data from session
+    $api_key = $this->session->userdata('api_key');
+    $username = $this->session->userdata('username');
+    $password = $this->session->userdata('password');
+
+    // Initialize cURL
+    $ch = curl_init($api_url);
+
+    // Set cURL options
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json',
+        'X-API-KEY: ' . $api_key // Include API key in the header
+    ));
+
+    // Set Basic Authentication credentials
+    curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password); // Basic Auth
+    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+
+    // Execute the cURL request
+    $response = curl_exec($ch);
+
+    // Check for cURL errors
+    if (curl_errno($ch)) {
+        $error = curl_error($ch);
+        curl_close($ch);
+
+        // Handle failure case and load error view
+        $data['error'] = 'Request Error: ' . $error;
+        $this->load->view('error_view', $data);
+    } else {
+        curl_close($ch);
+
+        // Decode the JSON response
+        $data['employee'] = json_decode($response, true);
+
+        // Check if the employee data is found
+        if (!empty($data['employee'])) {
+            // Load the view to display the employee details
+            $this->load->view('employee_view', $data);
+        } else {
+            // Handle employee not found
+            $data['error'] = 'Employee not found.';
+            $this->load->view('error_view', $data);
+        }
+    }
+}
+
     // Method for loading the error page
     public function error_page()
     {

@@ -32,6 +32,7 @@
                     <th>Last Name</th>
                     <th>Phone</th>
                     <th>Email</th>
+                    <th> Emplyee Details </th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                         <td><?php echo htmlspecialchars($user['last_name']); ?></td>
                         <td><?php echo htmlspecialchars($user['phone']); ?></td>
                         <td><?php echo htmlspecialchars($user['email']); ?></td>
+                        <td><button><a href="<?php echo base_url().'get-employee/'.$user['id']; ?>">View This Emplyee</a></button></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

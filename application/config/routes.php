@@ -63,3 +63,5 @@ $route['client/error_page'] = 'ApiClientController/error_page';
 
 
 $route['client/store'] = 'ApiClientController/form';
+
+$route['get-employee/(:num)'] = 'ApiClientController/getEmployeeById/$1';
