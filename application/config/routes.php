@@ -60,3 +60,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['client/api_key_form'] = 'ApiClientController/api_key_form';
 $route['client/get_users'] = 'ApiClientController/get_users';
 $route['client/error_page'] = 'ApiClientController/error_page';
+
+
+$route['client/store'] = 'ApiClientController/form';

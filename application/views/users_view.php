@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+<h1>List of Users  <button><a href="<?php echo base_url().'client/store'; ?>">Add Employee</a></button></h1>
     <h1>List of Users</h1>
     <?php if (!empty($users)) : ?>
         <table>

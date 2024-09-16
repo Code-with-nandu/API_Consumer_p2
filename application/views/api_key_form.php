@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Enter API Key and Credentials to Fetch Users</h2>
-    <form action="<?php echo site_url('ApiClientController/get_users'); ?>" method="post">
+    <form action="<?php echo site_url('ApiClientController/authenticate'); ?>" method="post">
         <label for="api_key">API Key:</label>
         <input type="text" id="api_key" name="api_key" required><br>
 
