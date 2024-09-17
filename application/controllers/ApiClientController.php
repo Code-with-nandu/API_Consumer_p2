@@ -170,64 +170,136 @@ class ApiClientController extends CI_Controller
     }
 
     // Method to fetch employee details by ID
-public function getEmployeeById($id)
-{
-    // Check if API credentials are stored in session
-    if (!$this->session->userdata('api_key') || !$this->session->userdata('username') || !$this->session->userdata('password')) {
-        $this->session->set_flashdata('error', 'Please authenticate first');
-        redirect('ApiClientController/api_key_form');
-    }
+    public function getEmployeeById($id)
+    {
+        // Check if API credentials are stored in session
+        if (!$this->session->userdata('api_key') || !$this->session->userdata('username') || !$this->session->userdata('password')) {
+            $this->session->set_flashdata('error', 'Please authenticate first');
+            redirect('ApiClientController/api_key_form');
+        }
 
-    // API URL of the First Project (API Provider)
-    $api_url = 'http://localhost/1_api/API_Provider_p2/index.php/api/find/' . $id;
+        // API URL of the First Project (API Provider)
+        $api_url = 'http://localhost/1_api/API_Provider_p2/index.php/api/find/' . $id;
 
-    // Retrieve authentication data from session
-    $api_key = $this->session->userdata('api_key');
-    $username = $this->session->userdata('username');
-    $password = $this->session->userdata('password');
+        // Retrieve authentication data from session
+        $api_key = $this->session->userdata('api_key');
+        $username = $this->session->userdata('username');
+        $password = $this->session->userdata('password');
 
-    // Initialize cURL
-    $ch = curl_init($api_url);
+        // Initialize cURL
+        $ch = curl_init($api_url);
 
-    // Set cURL options
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'X-API-KEY: ' . $api_key // Include API key in the header
-    ));
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'X-API-KEY: ' . $api_key // Include API key in the header
+        ));
 
-    // Set Basic Authentication credentials
-    curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password); // Basic Auth
-    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        // Set Basic Authentication credentials
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password); // Basic Auth
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 
-    // Execute the cURL request
-    $response = curl_exec($ch);
+        // Execute the cURL request
+        $response = curl_exec($ch);
 
-    // Check for cURL errors
-    if (curl_errno($ch)) {
-        $error = curl_error($ch);
-        curl_close($ch);
+        // Check for cURL errors
+        if (curl_errno($ch)) {
+            $error = curl_error($ch);
+            curl_close($ch);
 
-        // Handle failure case and load error view
-        $data['error'] = 'Request Error: ' . $error;
-        $this->load->view('error_view', $data);
-    } else {
-        curl_close($ch);
-
-        // Decode the JSON response
-        $data['employee'] = json_decode($response, true);
-
-        // Check if the employee data is found
-        if (!empty($data['employee'])) {
-            // Load the view to display the employee details
-            $this->load->view('employee_view', $data);
-        } else {
-            // Handle employee not found
-            $data['error'] = 'Employee not found.';
+            // Handle failure case and load error view
+            $data['error'] = 'Request Error: ' . $error;
             $this->load->view('error_view', $data);
+        } else {
+            curl_close($ch);
+
+            // Decode the JSON response
+            $data['employee'] = json_decode($response, true);
+
+            // Check if the employee data is found
+            if (!empty($data['employee'])) {
+                // Load the view to display the employee details
+                $this->load->view('employee_view', $data);
+            } else {
+                // Handle employee not found
+                $data['error'] = 'Employee not found.';
+                $this->load->view('error_view', $data);
+            }
         }
     }
-}
+    public function load_update_form()
+    {
+        $this->load->view('update_employee_view'); // Load the form view
+    }
+
+    // Function to handle form submission and update employee via API
+    public function update_employee()
+    {
+        // Get form data
+        $id = $this->input->post('id');
+        $first_name = $this->input->post('first_name');
+        $last_name = $this->input->post('last_name');
+        $phone = $this->input->post('phone');
+        $email = $this->input->post('email');
+
+        // Prepare data to send to the API Provider     
+        $data = array(
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'phone' => $phone,
+            'email' => $email
+        );
+
+        // API endpoint (URL of the First Project's API)
+        $url = "http://localhost/1_api/API_Provider/index.php/api/update/" . $id;
+
+        // Initialize cURL
+        $ch = curl_init($url);
+
+        // Convert data array to JSON
+        $json_data = json_encode($data);
+
+        // Set cURL options for a PUT request
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($json_data)
+        ));
+
+        // Execute the cURL request
+        $response = curl_exec($ch);
+
+        // Check for cURL errors
+        if (curl_errno($ch)) {
+            $error = curl_error($ch);
+            curl_close($ch);
+
+            // Load error view if there is an issue
+            $data['message'] = $error;
+            $this->load->view('error_view', $data);
+        } else {
+            curl_close($ch);
+
+            // Decode the API response
+            $api_response = json_decode($response, true);
+
+            // Check the response status from the API
+            if ($api_response['status'] === true) {
+                $this->session->set_flashdata('success', $api_response['message']);
+                redirect('client/get_users'); // Redirect to the URL you specified
+            } else {
+                $this->session->set_flashdata('error', $api_response['message']);
+                redirect('client/error'); // Redirect to an error page
+            }
+        }
+    }
+
+
+
+
 
     // Method for loading the error page
     public function error_page()
