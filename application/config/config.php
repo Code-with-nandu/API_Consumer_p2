@@ -32,7 +32,7 @@ if (isset($_SERVER['HTTP_HOST'])) {
         $config['base_url'] = 'http://localhost/1_api/API_Consumer_p2/';
     } else {
         // Base URL for live server
-        $config['base_url'] = 'https://krishnendudalui.in.net/API_Consumer_p2/index.php/';
+        $config['base_url'] = 'https://krishnendudalui.in.net/API_Consumer_p2/';
     }
 }
 
