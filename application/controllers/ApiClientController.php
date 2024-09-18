@@ -10,6 +10,120 @@ class ApiClientController extends CI_Controller
         $this->load->helper('url');
         $this->load->library('session');
     }
+    public function register() {
+        // Load registration form view
+        $this->load->view('register_view');
+    }
+    public function registerUser() {
+        // Define the API endpoint for registration
+        $apiUrl = "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/register";
+
+        // Data to send in the POST request
+        $postData = [
+            'name'     => $this->input->post('name'),
+            'email'    => $this->input->post('email'),
+            'password' => $this->input->post('password')
+        ];
+
+        // Initialize cURL request
+        $ch = curl_init($apiUrl);
+
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+
+        // Execute the request
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        // Handle cURL errors
+        if (curl_errno($ch)) {
+            $error_msg = curl_error($ch);
+            $this->session->set_flashdata('error', 'cURL Error: ' . $error_msg);
+        } elseif ($httpCode != 200) {
+            $this->session->set_flashdata('error', 'HTTP Error: ' . $httpCode);
+        } else {
+            // Decode the API response
+            $responseData = json_decode($response, true);
+
+            if ($responseData['status'] === true) {
+                $this->session->set_flashdata('success', 'Successfully registered!');
+            } else {
+                $this->session->set_flashdata('error', $responseData['message']);
+            }
+        }
+
+        // Close cURL
+        curl_close($ch);
+
+        // Redirect or load view after response
+        redirect(base_url('ApiClientController/register'));
+    }
+  
+    public function showLoginForm() {
+        // Load the login form view
+        $this->load->view('login_form');
+    }
+
+    
+        public function login() {
+            // Get form inputs from user
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+    
+            // Prepare data to send to the First Project (API Provider)
+            $loginData = array(
+                'email' => $email,
+                'password' => $password
+            );
+    
+            // Convert the data array to JSON format
+            $jsonLoginData = json_encode($loginData);
+    
+            // Initialize cURL for sending POST request
+            $ch = curl_init();
+    
+            // Set the URL of the First Project's login endpoint
+            curl_setopt($ch, CURLOPT_URL, "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/login");
+    
+            // Set options for cURL request
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonLoginData);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json', // Set content type to JSON
+                'Accept: application/json'
+            ));
+    
+            // Execute cURL request and get the response
+            $response = curl_exec($ch);
+    
+            // Close the cURL session
+            curl_close($ch);
+    
+            // Decode the JSON response from the API
+            $responseData = json_decode($response, true);
+    
+            // Check if the login was successful based on the API's response
+            if ($responseData['status']) {
+                // If login is successful, store the token in the session
+                $token = $responseData['token'];
+                $this->session->set_userdata('token', $token);
+    
+                // Set a success message and redirect to a dashboard or home page
+                $this->session->set_flashdata('success', 'Login successful! Token stored.');
+                redirect('ApiClientController/get_users');
+            } else {
+                // If login failed, show the error message from the API response
+                $this->session->set_flashdata('error', $responseData['message']);
+                redirect('ApiClientController/showLoginForm');
+            }
+        }
+    
+      
+    
+    
 
     // Method to display the API key input form
     public function api_key_form()
