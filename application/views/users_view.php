@@ -103,12 +103,46 @@
                 font-size: 14px;
             }
         }
+        .button-container {
+        text-align: right; /* Align button container to the right */
+        margin-top: 20px; /* Add some space above the button */
+    }
+        .add-employee-button {
+        background-color: #4CAF50; /* Green background */
+        border: none; /* Remove border */
+        color: white; /* White text */
+        padding: 15px 32px; /* Top/bottom and left/right padding */
+        text-align: center; /* Center the text */
+        text-decoration: none; /* Remove underline from link */
+        display: inline-block; /* Make it behave like a button */
+        font-size: 16px; /* Increase font size */
+        margin: 4px 2px; /* Add some margin */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 4px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    .add-employee-button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+
+    .add-employee-button a {
+        color: white; /* White text for link */
+        text-decoration: none; /* Remove underline */
+    }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>List of Users</h1>
+
+        <h1 class="button-container">
+            <button class="add-employee-button">
+                <a href="<?php echo base_url().'client/store'; ?>">Add Employee</a>
+            </button>
+        </h1>
+        
         <!-- Check if there are users to display -->
         <?php if (!empty($users)) : ?>
             <table>
@@ -125,6 +159,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Sort users in descending order based on ID -->
+                    <?php 
+                    // Sort users array in descending order
+                    usort($users, function($a, $b) {
+                        return $b['id'] - $a['id'];
+                    });
+                    ?>
                     <!-- Loop through users and display each one -->
                     <?php foreach ($users as $user) : ?>
                         <tr>
@@ -137,8 +178,7 @@
                                 <a href="<?php echo base_url().'get-employee/'.$user['id']; ?>" class="btn view-btn">View</a>
                             </td>
                             <td>
-                                <a href="<?php echo base_url().'load-update-form/';?>" class="btn update-btn">Update</a>
-                                <!-- <td><button><a href="<?php echo base_url().'load-update-form/'; ?>">Update Emplyee</a></button></td> -->
+                                <a href="<?php echo base_url().'load-update-form/'.$user['id']; ?>" class="btn update-btn">Update</a>
                             </td>
                             <td>
                                 <a href="<?php echo base_url().'delete_employee/'.$user['id']; ?>" class="btn delete-btn">Delete</a>
@@ -152,5 +192,6 @@
         <?php endif; ?>
     </div>
 </body>
+
 
 </html>

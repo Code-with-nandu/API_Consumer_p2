@@ -66,7 +66,7 @@ $route['client/store'] = 'ApiClientController/form';
 $route['get-employee/(:num)'] = 'ApiClientController/getEmployeeById/$1';
 
 
-$route['load-update-form'] = 'ApiClientController/load_update_form';  // Route to load the update form
+$route['load-update-form/(:num)'] = 'ApiClientController/load_update_form/$1';  // Route to load the update form
 $route['update-employee'] = 'ApiClientController/update_employee';    // Route to handle form submission
 
 
