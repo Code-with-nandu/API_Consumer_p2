@@ -16,7 +16,8 @@ class ApiClientController extends CI_Controller
     }
     public function registerUser() {
         // Define the API endpoint for registration
-        $apiUrl = "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/register";
+        // $apiUrl = "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/register";
+        $apiUrl = "https://krishnendudalui.in.net/API_Provider_p2/index.php/api/Auth_Controller/register";
 
         // Data to send in the POST request
         $postData = [
@@ -85,8 +86,9 @@ class ApiClientController extends CI_Controller
             $ch = curl_init();
     
             // Set the URL of the First Project's login endpoint
-            curl_setopt($ch, CURLOPT_URL, "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/login");
-    
+            // curl_setopt($ch, CURLOPT_URL, "http://localhost/1_api/API_Provider_p2/index.php/api/Auth_Controller/login");
+            curl_setopt($ch, CURLOPT_URL, "https://krishnendudalui.in.net/API_Provider_p2/index.php/api/Auth_Controller/login");
+
             // Set options for cURL request
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonLoginData);
@@ -158,7 +160,10 @@ class ApiClientController extends CI_Controller
         }
 
         // API URL of the First Project (API Provider)
-        $url = "http://localhost/1_api/API_Provider_p2/index.php/ApiDemo/users";
+        // $url = "http://localhost/1_api/API_Provider_p2/index.php/ApiDemo/users";
+        $url = "https://krishnendudalui.in.net/API_Provider_p2/index.php/ApiDemo/users";
+
+     
 
         // Retrieve API credentials from session
         $api_key = $this->session->userdata('api_key');
@@ -230,7 +235,10 @@ class ApiClientController extends CI_Controller
         ];
 
         // cURL configuration for POST request to the API
-        $url = 'http://localhost/1_api/API_Provider_p2/index.php/api/store'; // API endpoint
+        // $url = 'http://localhost/1_api/API_Provider_p2/index.php/api/store'; // API endpoint
+        $url = 'https://krishnendudalui.in.net/API_Provider_p2/index.php/api/store'; // API endpoint
+
+        
 
         // Retrieve API credentials from session
         $api_key = $this->session->userdata('api_key');
@@ -293,7 +301,10 @@ class ApiClientController extends CI_Controller
         }
 
         // API URL of the First Project (API Provider)
-        $api_url = 'http://localhost/1_api/API_Provider_p2/index.php/api/find/' . $id;
+        // $api_url = 'http://localhost/1_api/API_Provider_p2/index.php/api/find/' . $id;
+
+        $api_url = 'https://krishnendudalui.in.net/API_Provider_p2/index.php/api/find/' . $id;
+        
 
         // Retrieve authentication data from session
         $api_key = $this->session->userdata('api_key');
@@ -365,7 +376,9 @@ class ApiClientController extends CI_Controller
         );
 
         // API endpoint (URL of the First Project's API)
-        $url = "http://localhost/1_api/API_Provider/index.php/api/update/" . $id;
+        // $url = "http://localhost/1_api/API_Provider/index.php/api/update/" . $id;
+
+        $url = "https://krishnendudalui.in.net/API_Provider_p2/index.php/api/update/" . $id;
 
         // Initialize cURL
         $ch = curl_init($url);
@@ -415,7 +428,10 @@ class ApiClientController extends CI_Controller
     public function delete_employee($id)
     {
         // API endpoint (URL of the First Project's API)
-        $url = "http://localhost/1_api/API_Provider/index.php/api/delete/" . $id;
+        // $url = "http://localhost/1_api/API_Provider/index.php/api/delete/" . $id;
+        $url = "https://krishnendudalui.in.net/API_Provider_p2/index.php/api/delete/" . $id;
+
+
 
         // Initialize cURL
         $ch = curl_init($url);
