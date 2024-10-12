@@ -183,6 +183,7 @@
                             <td>
                                 <a href="<?php echo base_url().'delete_employee/'.$user['id']; ?>" class="btn delete-btn">Delete</a>
                             </td>
+                            <!-- <td><button><a href="<?//php echo base_url().'delete_employee/'.$user['id']; ?>">Delete This Emplyee</a></button></td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

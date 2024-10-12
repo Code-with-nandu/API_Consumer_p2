@@ -24,16 +24,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost/1_api/API_Consumer_p2/';
-if (isset($_SERVER['HTTP_HOST'])) {
-    $host = $_SERVER['HTTP_HOST'];
+// if (isset($_SERVER['HTTP_HOST'])) {
+//     $host = $_SERVER['HTTP_HOST'];
 
-    if ($host == 'localhost' || strpos($host, '127.0.0.1') !== false) {
-        // Base URL for localhost
-        $config['base_url'] = 'http://localhost/1_api/API_Consumer_p2/';
-    } else {
-        // Base URL for live server
-        $config['base_url'] = 'https://krishnendudalui.in.net/API_Consumer_p2/';
-    }
+//     if ($host == 'localhost' || strpos($host, '127.0.0.1') !== false) {
+//         // Base URL for localhost
+//         $config['base_url'] = 'http://localhost/1_api/API_Consumer_p2/';
+//     } else {
+//         // Base URL for live server
+//         $config['base_url'] = 'https://krishnendudalui.in.net/API_Consumer_p2/';
+//     }
+// }
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    $config['base_url'] = 'http://localhost/1_api/API_Consumer_p2/';
+} else {
+    $config['base_url'] = 'https://krishnendudalui.in.net/API_Consumer_p2/';
 }
 
 

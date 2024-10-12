@@ -75,4 +75,4 @@ $route['update-employee'] = 'ApiClientController/update_employee';    // Route t
 $route['delete_employee/(:num)'] = 'ApiClientController/delete_employee/$1';// Route to handle Delete submission
 
 
-
+// $route['delete_employee/(:num)'] = 'ApiClientController/delete_employee/$1';
