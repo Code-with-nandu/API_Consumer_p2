@@ -1,10 +1,10 @@
-# CodeIgniter REST API Setup
+# CodeIgniter REST API consumer -V2 Setup
 
 This guide will walk you through setting up two CodeIgniter projects: the first project acts as an API Provider (exposing data via a REST API), and the second project acts as an API Consumer (fetching data from the first project's API).
 
 ---
 
-## **Project 1: API Provider**
+## **Project 2: API Provider-V2**
 
 ### Step 1: Download CodeIgniter
 - Download CodeIgniter from the official site: [CodeIgniter Downloads](https://codeigniter.com/userguide3/installation/downloads.html).
@@ -37,9 +37,32 @@ You can download them from this [CodeIgniter RESTful API Tutorial](https://www.f
   - `C:\xampp\htdocs\6_api\funda_api_s1\application\libraries\RestController.php`
   - `C:\xampp\htdocs\6_api\funda_api_s1\application\libraries\Format.php`
 
-### Step 5: Verify Composer Installation
-- Open a new terminal and run `composer` to check if Composer is installed.
-  
-- If Composer is installed, run the following command to serve the application:
-  ```bash
-  php -S localhost:8000
+### Step 5: API key credentials :
+Api key : jay
+Username: admin
+Password :1234
+
+
+
+
+- 🌱 I’m currently learning **REST API ,Codeigniter4**
+
+- 👨‍💻 All of my projects are available at [http://44.202.232.220/](http://44.202.232.220/)
+
+- 📝 I regularly write articles on [http://44.202.232.220/blog](http://44.202.232.220/blog)
+
+- 💬 Ask me about **REST API ,Codeigniter**
+
+- 📫 How to reach me **krishendudalui@gmail.com**
+
+- ⚡ Fun fact **Daily Meditation**
+### Step 6: 
+- 🔭 API key credentials   [API key credentials ](https://krishnendudalui.in.net/API_Consumer_p2/index.php/client/api_key_form)
+![API key credentials image](assets/image/image_1.png)
+
+### Step 7: 
+### Step 8: 
+### Step 9: 
+### Step 10: 
+### Step 11: 
+### Step 12: 
