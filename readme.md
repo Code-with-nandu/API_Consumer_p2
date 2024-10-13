@@ -24,15 +24,16 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://fb.com/krishnendu dalui" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="krishnendu dalui" height="30" width="40" /></a>
-</p>
-
+</p>              
+🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
+# project :01
 # CodeIgniter REST API consumer -V2 Setup
 
 This guide will walk you through setting up two CodeIgniter projects: the first project acts as an API Provider (exposing data via a REST API), and the second project acts as an API Consumer (fetching data from the first project's API).
 
 ---
 
-## **Project 2: API Provider-V2**
+## **Project 2: API consumer-V2**
 
 ### Step 1: Download Local host  project
 
@@ -93,7 +94,8 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 
  - #
--  # step 2
+🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
+# project :02
 
 
 # CodeIgniter REST API provider-V2 Setup
