@@ -26,14 +26,15 @@
 <a href="https://fb.com/krishnendu dalui" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="krishnendu dalui" height="30" width="40" /></a>
 </p>              
 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
-# project :01
+
+# project :02
 # CodeIgniter REST API consumer -V2 Setup
 
 This guide will walk you through setting up two CodeIgniter projects: the first project acts as an API Provider (exposing data via a REST API), and the second project acts as an API Consumer (fetching data from the first project's API).
 
 ---
 
-## **Project 2: API consumer-V2**
+## **Project 02: API consumer-V2**
 
 ### Step 1: Download Local host  project
 
@@ -131,6 +132,7 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 
 
+
 # GET Method :
 
 ### Step 5
@@ -148,12 +150,6 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 ## (PUT Method :Update data thorough PUT method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/update/10]
 ![Image 3](https://drive.google.com/uc?id=102-6f0zWhtqbqy44CCMYpKt5EpVqdZng)
 
-## 
-
-    - "first_name": "Art Of Living1",
-       - "last_name": "Internal Center1",
-       - "phone": "56565656561",
-       - "email": "jayravi@artofliving.org1"
 
 ## raw data
 -  "first_name": "Art Of Living1",
@@ -178,6 +174,7 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 ### Step 6
 ![API Key Credentials Image](https://drive.google.com/uc?id=1-zebCCnkuFto6GYCGHmSdBxgx2B1o4h)
+
 
 
 
