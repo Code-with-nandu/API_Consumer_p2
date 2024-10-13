@@ -128,6 +128,13 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 - 👨‍💻  Short note Link [https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit](https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit)
 
+# Authentication :
+
+## ( :First authencticate  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api]
+![Image 1](https://drive.google.com/uc?id=115B7bYso9n6d5Ynta0Nuw9l0D1h_ovH3)
+![Image 1](https://drive.google.com/uc?id=11BDqkOrqZ-FId2LaHTdKjyRfxkWz3t2y)
+
+
 
 #  GET Method 
 
