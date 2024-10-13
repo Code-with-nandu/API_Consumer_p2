@@ -129,23 +129,20 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 - 👨‍💻  Short note Link [https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit](https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit)
 
 
+#  GET Method 
 
-
-
-# Step 5 :GET Method ::Call all  data
-
-## (GET Method :Call all  data )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api]
+## (Step 5 :GET Method :Call all  data )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api]
 ![Image 1](https://drive.google.com/uc?id=1-zebCCnkuFto6GYCGHmSdBxgx2B1o4hW)
 
-### Step 6 GET Method Specific call through id
 
-## (GET Method :Specific call through id )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/find/9]
+
+## (Step 6 :GET Method :Specific call through id )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/find/9]
 ![Image 2](https://drive.google.com/uc?id=10-zoZIjZZ7jhjisJ4KiP-hhjWVD_0ini)
 
 
-# Step 7: PUT Method Update data thorough PUT method :
+# PUT Method 
 
-## (PUT Method :Update data thorough PUT method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/update/10]
+## ( Step 7: PUT Method :Update data thorough PUT method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/update/10]
 ![Image 3](https://drive.google.com/uc?id=1-z34g1odcSID8XcGPsUW8AJ1s61BUo9L)
 
 
@@ -156,16 +153,16 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 - "email": "jayravi@artofliving.org1"
 
 
-#  Step 8 : POST Method : New  data thorough POST method
+#  POST Method 
 
-## (POST Method :New  data thorough POST method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/store]
+## (Step 8 : POST Method :New  data thorough POST method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/store]
 ![Image 4](https://drive.google.com/uc?id=1086KpomsQ7E-7WAxG-ZXF_LS8O54yfoN)
 
 
 
 
-# Step 8 : DELETE Method :DELETE data thorough DELETE method
-## (DELETE Method :DELETE data thorough DELETE method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/delete/41]
+#  DELETE Method 
+## (Step 8 : DELETE Method :DELETE data thorough DELETE method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/delete/41]
 
 ![Image 5](https://drive.google.com/uc?id=109zOfNiuWce0aT-j7FEe9h8QyAmIrSMI)
 
