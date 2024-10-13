@@ -132,16 +132,15 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 
 
-
 # Step 5 :GET Method ::Call all  data
 
 ## (GET Method :Call all  data )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api]
-![Image 1](https://drive.google.com/uc?id=1-z34g1odcSID8XcGPsUW8AJ1s61BUo9L)
+![Image 1](https://drive.google.com/uc?id=1-zebCCnkuFto6GYCGHmSdBxgx2B1o4hW)
 
 ### Step 6 GET Method Specific call through id
 
 ## (GET Method :Specific call through id )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/find/9]
-![Image 2](https://drive.google.com/uc?id=1-z34g1odcSID8XcGPsUW8AJ1s61BUo9L)
+![Image 2](https://drive.google.com/uc?id=10-zoZIjZZ7jhjisJ4KiP-hhjWVD_0ini)
 
 
 # Step 7: PUT Method Update data thorough PUT method :
@@ -160,7 +159,7 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 #  Step 8 : POST Method : New  data thorough POST method
 
 ## (POST Method :New  data thorough POST method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/store]
-![Image 4](https://drive.google.com/uc?id=1-z34g1odcSID8XcGPsUW8AJ1s61BUo9L)
+![Image 4](https://drive.google.com/uc?id=1086KpomsQ7E-7WAxG-ZXF_LS8O54yfoN)
 
 
 
@@ -168,7 +167,7 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 # Step 8 : DELETE Method :DELETE data thorough DELETE method
 ## (DELETE Method :DELETE data thorough DELETE method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/delete/41]
 
-![Image 5](https://drive.google.com/uc?id=1-z34g1odcSID8XcGPsUW8AJ1s61BUo9L)
+![Image 5](https://drive.google.com/uc?id=109zOfNiuWce0aT-j7FEe9h8QyAmIrSMI)
 
 
 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
