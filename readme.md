@@ -169,9 +169,8 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
 
-
 <h3 align="left">Support:</h3>
-<p><a href="https://www.buymeacoffee.com/krishendu"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="krishendu" /></a><a href="https://ko-fi.com/krishnendu"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="krishnendu" /></a></p><br><br>
+<p><a href="https://buymeacoffee.com/wdmmbh8wmk"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="krishendu" /></a><a href="https://buymeacoffee.com/wdmmbh8wmk"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="krishnendu" /></a></p><br><br>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=code-with-nandu&show_icons=true&locale=en&layout=compact" alt="code-with-nandu" /></p>
 
@@ -212,6 +211,8 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
+<!-- <img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" /> -->
+<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/main/output/snake.svg" alt="Snake animation" />
+
 
 ###
