@@ -131,7 +131,9 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 # Authentication :
 
 ## ( :First authencticate  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api]
+## step 1
 ![Image 1](https://drive.google.com/uc?id=115B7bYso9n6d5Ynta0Nuw9l0D1h_ovH3)
+## step 2
 ![Image 1](https://drive.google.com/uc?id=11BDqkOrqZ-FId2LaHTdKjyRfxkWz3t2y)
 
 
