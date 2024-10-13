@@ -92,10 +92,8 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 
 
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://www.chartjs.org" target="_blank" rel="noreferrer"> <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/> </a> <a href="https://codeigniter.com" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" alt="codeigniter" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> </p>
-
+ - #
+-  # step 2
 
 
 # CodeIgniter REST API provider-V2 Setup
@@ -106,30 +104,24 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 
 
 ### Step 1: Download Local host  project
-- 🌱 Prject name  **REST API ,REST API Provider in CI3 _V2 **
+
 - 👨‍💻 Local host  Link [http://localhost/1_api/API_Provider_p2/](http://localhost/1_api/API_Provider_p2/)
 
 
 
 ### Step 2: Github Link
--- 🌱 Prject name  **REST API ,REST API Provider in CI3 _V2 **
-
 
 - 👨‍💻  Github Link [https://github.com/Code-with-nandu/API_Provider_p2](https://github.com/Code-with-nandu/API_Provider_p2)
 
 
 
 ### Step 3: Full note  Link
-- 🌱 Prject name  **REST API ,REST API Provider in CI3 _V2 **
-
 
 - 👨‍💻  Full note  Link [https://docs.google.com/document/d/1-hiv-9v3-ndF4CtkKj_VtMgFjfqXNw47/edit](https://docs.google.com/document/d/1-hiv-9v3-ndF4CtkKj_VtMgFjfqXNw47/edit)
 
 
 
 ### Step 4: Short note Link
-- 🌱 Prject name  **REST API ,REST API Provider in CI3 _V2 **
-
 
 - 👨‍💻  Short note Link [https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit](https://docs.google.com/document/d/1-h_3U9h43kQhhkYqK2SZIMh1m7u8tJQy/edit)
 
@@ -153,13 +145,19 @@ This guide will walk you through setting up two CodeIgniter projects: the first 
 ### Step 7
 ## (PUT Method :Update data thorough PUT method  )[https://krishnendudalui.in.net/API_Provider_p2/index.php/api/update/10]
 ![Image 3](https://drive.google.com/uc?id=102-6f0zWhtqbqy44CCMYpKt5EpVqdZng)
-![ {
-        "first_name": "Art Of Living1",
-        "last_name": "Internal Center1",
-        "phone": "56565656561",
-        "email": "jayravi@artofliving.org1"
-    }
-]()
+
+## 
+
+    - "first_name": "Art Of Living1",
+       - "last_name": "Internal Center1",
+       - "phone": "56565656561",
+       - "email": "jayravi@artofliving.org1"
+
+## raw data
+-  "first_name": "Art Of Living1",
+- "last_name": "Internal Center1",
+- "phone": "56565656561",
+- "email": "jayravi@artofliving.org1"
 
 
 # POST Method :
